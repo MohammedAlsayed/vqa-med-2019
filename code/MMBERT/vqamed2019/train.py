@@ -159,8 +159,8 @@ if __name__ == '__main__':
     best_loss = np.inf
     counter = 0
 
-    train_epochs = range(1,args.num_epochs+1)
-    val_epochs  = range(1,args.num_epochs+1)
+    train_epochs = range(1,args.epochs+1)
+    val_epochs  = range(1,args.epochs+1)
     
     train_losses = []
     val_losses = []
