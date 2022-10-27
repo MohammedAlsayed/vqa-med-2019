@@ -1,0 +1,11 @@
+wandb
+pandas
+numpy
+torch
+torchvision
+albumentations
+pretrainedmodels
+transformers
+nltk
+matplotlib
+opencv-contrib-python

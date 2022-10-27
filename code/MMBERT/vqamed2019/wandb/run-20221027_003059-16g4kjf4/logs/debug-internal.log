@@ -1,0 +1,150 @@
+2022-10-27 00:30:59,463 INFO    StreamThr :93340 [internal.py:wandb_internal():88] W&B internal server running at pid: 93340, started at: 2022-10-27 00:30:59.460762
+2022-10-27 00:30:59,465 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: status
+2022-10-27 00:30:59,467 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: status
+2022-10-27 00:30:59,468 DEBUG   SenderThread:93340 [sender.py:send():303] send: header
+2022-10-27 00:30:59,468 INFO    WriterThread:93340 [datastore.py:open_for_write():75] open: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/run-16g4kjf4.wandb
+2022-10-27 00:30:59,491 DEBUG   SenderThread:93340 [sender.py:send():303] send: run
+2022-10-27 00:30:59,936 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: check_version
+2022-10-27 00:30:59,937 INFO    SenderThread:93340 [dir_watcher.py:__init__():216] watching files in: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files
+2022-10-27 00:30:59,937 INFO    SenderThread:93340 [sender.py:_start_run_threads():928] run started: 16g4kjf4 with start time 1666855859.45049
+2022-10-27 00:30:59,937 DEBUG   SenderThread:93340 [sender.py:send():303] send: summary
+2022-10-27 00:30:59,937 INFO    SenderThread:93340 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-27 00:30:59,938 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: check_version
+2022-10-27 00:31:00,259 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: run_start
+2022-10-27 00:31:00,260 DEBUG   HandlerThread:93340 [meta.py:__init__():34] meta init
+2022-10-27 00:31:00,260 DEBUG   HandlerThread:93340 [meta.py:__init__():49] meta init done
+2022-10-27 00:31:00,260 DEBUG   HandlerThread:93340 [meta.py:probe():215] probe
+2022-10-27 00:31:00,275 DEBUG   HandlerThread:93340 [meta.py:_setup_git():205] setup git
+2022-10-27 00:31:00,323 DEBUG   HandlerThread:93340 [meta.py:_setup_git():212] setup git done
+2022-10-27 00:31:00,324 DEBUG   HandlerThread:93340 [meta.py:_save_pip():53] save pip
+2022-10-27 00:31:00,324 DEBUG   HandlerThread:93340 [meta.py:_save_pip():67] save pip done
+2022-10-27 00:31:00,324 DEBUG   HandlerThread:93340 [meta.py:probe():253] probe done
+2022-10-27 00:31:00,328 DEBUG   SenderThread:93340 [sender.py:send():303] send: files
+2022-10-27 00:31:00,329 INFO    SenderThread:93340 [sender.py:_save_file():1171] saving file wandb-metadata.json with policy now
+2022-10-27 00:31:00,332 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-27 00:31:00,332 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: stop_status
+2022-10-27 00:31:00,582 DEBUG   SenderThread:93340 [sender.py:send():303] send: telemetry
+2022-10-27 00:31:00,943 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/output.log
+2022-10-27 00:31:00,944 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/requirements.txt
+2022-10-27 00:31:00,944 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/wandb-metadata.json
+2022-10-27 00:31:00,944 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_created():275] file/dir created: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/wandb-summary.json
+2022-10-27 00:31:01,160 INFO    Thread-17 :93340 [upload_job.py:push():143] Uploaded file /var/folders/tw/xj3lw_c51cz8ykdf7nj2lvmm0000gn/T/tmpxr46w4l4wandb/1q8fvyyb-wandb-metadata.json
+2022-10-27 00:31:02,949 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/output.log
+2022-10-27 00:31:03,641 DEBUG   SenderThread:93340 [sender.py:send():303] send: telemetry
+2022-10-27 00:31:04,960 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/output.log
+2022-10-27 00:31:06,967 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/output.log
+2022-10-27 00:31:15,588 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-27 00:31:15,589 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: stop_status
+2022-10-27 00:31:29,146 DEBUG   SenderThread:93340 [sender.py:send():303] send: stats
+2022-10-27 00:31:30,883 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-27 00:31:30,883 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: stop_status
+2022-10-27 00:31:31,056 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/config.yaml
+2022-10-27 00:31:46,174 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: stop_status
+2022-10-27 00:31:46,174 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: stop_status
+2022-10-27 00:31:48,296 DEBUG   SenderThread:93340 [sender.py:send():303] send: exit
+2022-10-27 00:31:48,296 INFO    SenderThread:93340 [sender.py:send_exit():442] handling exit code: 1
+2022-10-27 00:31:48,296 INFO    SenderThread:93340 [sender.py:send_exit():444] handling runtime: 48
+2022-10-27 00:31:48,296 INFO    SenderThread:93340 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-27 00:31:48,297 INFO    SenderThread:93340 [sender.py:send_exit():450] send defer
+2022-10-27 00:31:48,297 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:48,297 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 0
+2022-10-27 00:31:48,297 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:48,297 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 0
+2022-10-27 00:31:48,297 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 1
+2022-10-27 00:31:48,297 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:48,297 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 1
+2022-10-27 00:31:48,378 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:48,379 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 1
+2022-10-27 00:31:48,379 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 2
+2022-10-27 00:31:48,379 DEBUG   SenderThread:93340 [sender.py:send():303] send: stats
+2022-10-27 00:31:48,380 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:48,380 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 2
+2022-10-27 00:31:48,380 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:48,380 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 2
+2022-10-27 00:31:48,381 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 3
+2022-10-27 00:31:48,381 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:48,381 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 3
+2022-10-27 00:31:48,381 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:48,381 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 3
+2022-10-27 00:31:48,381 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 4
+2022-10-27 00:31:48,382 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:48,382 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 4
+2022-10-27 00:31:48,382 DEBUG   SenderThread:93340 [sender.py:send():303] send: summary
+2022-10-27 00:31:48,383 INFO    SenderThread:93340 [sender.py:_save_file():1171] saving file wandb-summary.json with policy end
+2022-10-27 00:31:48,383 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:48,383 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 4
+2022-10-27 00:31:48,383 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 5
+2022-10-27 00:31:48,383 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:48,383 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 5
+2022-10-27 00:31:48,384 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:48,384 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 5
+2022-10-27 00:31:48,384 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 6
+2022-10-27 00:31:48,384 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:48,384 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 6
+2022-10-27 00:31:48,384 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:48,384 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 6
+2022-10-27 00:31:49,139 INFO    Thread-13 :93340 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/wandb-summary.json
+2022-10-27 00:31:49,301 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-27 00:31:50,379 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 7
+2022-10-27 00:31:50,379 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: poll_exit
+2022-10-27 00:31:50,380 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:50,380 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 7
+2022-10-27 00:31:50,380 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:50,380 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 7
+2022-10-27 00:31:50,380 INFO    SenderThread:93340 [dir_watcher.py:finish():362] shutting down directory watcher
+2022-10-27 00:31:51,148 INFO    SenderThread:93340 [dir_watcher.py:_on_file_modified():292] file/dir modified: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/output.log
+2022-10-27 00:31:51,148 INFO    SenderThread:93340 [dir_watcher.py:finish():392] scan: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files
+2022-10-27 00:31:51,149 INFO    SenderThread:93340 [dir_watcher.py:finish():406] scan save: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/requirements.txt requirements.txt
+2022-10-27 00:31:51,149 INFO    SenderThread:93340 [dir_watcher.py:finish():406] scan save: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/output.log output.log
+2022-10-27 00:31:51,150 INFO    SenderThread:93340 [dir_watcher.py:finish():406] scan save: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/config.yaml config.yaml
+2022-10-27 00:31:51,157 INFO    SenderThread:93340 [dir_watcher.py:finish():406] scan save: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/wandb-summary.json wandb-summary.json
+2022-10-27 00:31:51,158 INFO    SenderThread:93340 [dir_watcher.py:finish():406] scan save: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/wandb-metadata.json wandb-metadata.json
+2022-10-27 00:31:51,159 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 8
+2022-10-27 00:31:51,161 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:51,161 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 8
+2022-10-27 00:31:51,161 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:51,161 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 8
+2022-10-27 00:31:51,161 INFO    SenderThread:93340 [file_pusher.py:finish():168] shutting down file pusher
+2022-10-27 00:31:52,016 INFO    Thread-21 :93340 [upload_job.py:push():143] Uploaded file /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/wandb-summary.json
+2022-10-27 00:31:52,017 INFO    Thread-19 :93340 [upload_job.py:push():143] Uploaded file /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/output.log
+2022-10-27 00:31:52,017 INFO    Thread-18 :93340 [upload_job.py:push():143] Uploaded file /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/requirements.txt
+2022-10-27 00:31:52,018 INFO    Thread-20 :93340 [upload_job.py:push():143] Uploaded file /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/files/config.yaml
+2022-10-27 00:31:52,223 INFO    Thread-12 (_thread_body):93340 [sender.py:transition_state():463] send defer: 9
+2022-10-27 00:31:52,224 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:52,224 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 9
+2022-10-27 00:31:52,225 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:52,225 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 9
+2022-10-27 00:31:52,225 INFO    SenderThread:93340 [file_pusher.py:join():173] waiting for file pusher
+2022-10-27 00:31:52,225 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 10
+2022-10-27 00:31:52,226 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:52,226 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 10
+2022-10-27 00:31:52,226 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:52,226 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 10
+2022-10-27 00:31:52,320 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 11
+2022-10-27 00:31:52,321 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:52,321 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 11
+2022-10-27 00:31:52,321 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:52,321 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 11
+2022-10-27 00:31:52,322 INFO    SenderThread:93340 [sender.py:transition_state():463] send defer: 12
+2022-10-27 00:31:52,323 DEBUG   SenderThread:93340 [sender.py:send():303] send: final
+2022-10-27 00:31:52,323 DEBUG   SenderThread:93340 [sender.py:send():303] send: footer
+2022-10-27 00:31:52,323 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: defer
+2022-10-27 00:31:52,323 INFO    HandlerThread:93340 [handler.py:handle_request_defer():161] handle defer: 12
+2022-10-27 00:31:52,323 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: defer
+2022-10-27 00:31:52,323 INFO    SenderThread:93340 [sender.py:send_request_defer():459] handle sender defer: 12
+2022-10-27 00:31:52,324 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: poll_exit
+2022-10-27 00:31:52,325 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: poll_exit
+2022-10-27 00:31:52,326 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: server_info
+2022-10-27 00:31:52,326 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: get_summary
+2022-10-27 00:31:52,326 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: sampled_history
+2022-10-27 00:31:52,326 DEBUG   SenderThread:93340 [sender.py:send_request():317] send_request: server_info
+2022-10-27 00:31:52,852 INFO    MainThread:93340 [wandb_run.py:_footer_history_summary_info():3377] rendering history
+2022-10-27 00:31:52,852 INFO    MainThread:93340 [wandb_run.py:_footer_history_summary_info():3409] rendering summary
+2022-10-27 00:31:52,852 INFO    MainThread:93340 [wandb_run.py:_footer_sync_info():3333] logging synced files
+2022-10-27 00:31:52,853 DEBUG   HandlerThread:93340 [handler.py:handle_request():138] handle_request: shutdown
+2022-10-27 00:31:52,853 INFO    HandlerThread:93340 [handler.py:finish():814] shutting down handler
+2022-10-27 00:31:53,324 INFO    WriterThread:93340 [datastore.py:close():279] close: /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221027_003059-16g4kjf4/run-16g4kjf4.wandb
+2022-10-27 00:31:53,856 INFO    SenderThread:93340 [sender.py:finish():1331] shutting down sender
+2022-10-27 00:31:53,857 INFO    SenderThread:93340 [file_pusher.py:finish():168] shutting down file pusher
+2022-10-27 00:31:53,857 INFO    SenderThread:93340 [file_pusher.py:join():173] waiting for file pusher
+2022-10-27 00:31:54,486 INFO    MainThread:93340 [internal.py:handle_exit():78] Internal process exited

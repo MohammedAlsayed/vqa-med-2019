@@ -1,0 +1,35 @@
+Downloading: 100%|██████████████████████████████████████████████████████████████████████████| 570/570 [00:00<00:00, 97.0kB/s]
+
+
+
+
+
+
+
+
+
+Downloading: 100%|████████████████████████████████████████████████████████████████████████| 440M/440M [00:19<00:00, 22.5MB/s]
+Some weights of the model checkpoint at bert-base-uncased were not used when initializing BertModel: ['cls.predictions.decoder.weight', 'cls.predictions.transform.LayerNorm.weight', 'cls.predictions.bias', 'cls.predictions.transform.dense.weight', 'cls.seq_relationship.weight', 'cls.predictions.transform.dense.bias', 'cls.seq_relationship.bias', 'cls.predictions.transform.LayerNorm.bias']
+- This IS expected if you are initializing BertModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing BertModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Downloading: "https://download.pytorch.org/models/resnet152-394f9c45.pth" to /Users/mohammed/.cache/torch/hub/checkpoints/resnet152-394f9c45.pth
+
+
+100%|█████████████████████████████████████████████████████████████████████████████████████| 230M/230M [00:05<00:00, 47.4MB/s]
+Downloading: 100%|█████████████████████████████████████████████████████████████████████████| 232k/232k [00:00<00:00, 725kB/s]
+Downloading: 100%|████████████████████████████████████████████████████████████████████████| 28.0/28.0 [00:00<00:00, 11.6kB/s]
+  0%|                                                                                                | 0/800 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/train.py", line 167, in <module>
+    train_loss, _, _, _, _ = train_one_epoch(trainloader, model, optimizer, criterion, device, scaler, args, idx2ans)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/utils.py", line 557, in train_one_epoch
+    logits, _, _ = model(img, question_token, segment_ids, attention_mask)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1148, in _call_impl
+    result = forward_call(*input, **kwargs)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/utils.py", line 529, in forward
+    h, attn_scores, intermediate = self.transformer(img, input_ids, segment_ids, input_mask)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1130, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/utils.py", line 505, in forward
+    h[i][1] = v_2[i]
+RuntimeError: The expanded size of the tensor (768) must match the existing size (312) at non-singleton dimension 0.  Target sizes: [768].  Tensor sizes: [312]

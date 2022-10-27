@@ -1,0 +1,26 @@
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_setup.py:_flush():68] Configure stats pid to 88435
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_setup.py:_flush():68] Loading settings from /Users/mohammed/.config/wandb/settings
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_setup.py:_flush():68] Loading settings from /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/settings
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_setup.py:_flush():68] Loading settings from environment variables: {'_require_service': 'True'}
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_setup.py:_flush():68] Inferring run settings from compute environment: {'program_relpath': 'vqamed2019/train.py', 'program': '/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/train.py'}
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_setup.py:_flush():68] Applying login settings: {'api_key': '***REDACTED***'}
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_init.py:_log_setup():476] Logging user logs to /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221026_224832-uconwzly/logs/debug.log
+2022-10-26 22:48:32,448 INFO    MainThread:88435 [wandb_init.py:_log_setup():477] Logging internal logs to /Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/wandb/run-20221026_224832-uconwzly/logs/debug-internal.log
+2022-10-26 22:48:32,449 INFO    MainThread:88435 [wandb_init.py:init():516] calling init triggers
+2022-10-26 22:48:32,449 INFO    MainThread:88435 [wandb_init.py:init():519] wandb.init called with sweep_config: {}
+config: {'run_name': 'bench_mark1', 'data_dir': '../dataset/', 'model_dir': '../out/weights/val_loss_3.pt', 'save_dir': '../out/weights/benchmark1', 'category': None, 'use_pretrained': False, 'mixed_precision': True, 'clip': False, 'seed': 42, 'num_workers': 4, 'epochs': 10, 'train_pct': 1.0, 'valid_pct': 1.0, 'test_pct': 1.0, 'max_position_embeddings': 28, 'batch_size': 16, 'lr': 0.0001, 'factor': 0.1, 'patience': 10, 'hidden_dropout_prob': 0.3, 'smoothing': None, 'image_size': 224, 'hidden_size': 312, 'vocab_size': 30522, 'type_vocab_size': 2, 'heads': 12, 'n_layers': 4, 'num_vis': 64}
+2022-10-26 22:48:32,449 INFO    MainThread:88435 [wandb_init.py:init():569] starting backend
+2022-10-26 22:48:32,449 INFO    MainThread:88435 [wandb_init.py:init():573] setting up manager
+2022-10-26 22:48:32,450 INFO    MainThread:88435 [backend.py:_multiprocessing_setup():102] multiprocessing start_methods=spawn,fork,forkserver, using: spawn
+2022-10-26 22:48:32,453 INFO    MainThread:88435 [wandb_init.py:init():580] backend started and connected
+2022-10-26 22:48:32,460 INFO    MainThread:88435 [wandb_init.py:init():658] updated telemetry
+2022-10-26 22:48:32,503 INFO    MainThread:88435 [wandb_init.py:init():693] communicating run to backend with 60 second timeout
+2022-10-26 22:48:33,166 INFO    MainThread:88435 [wandb_run.py:_on_init():2000] communicating current version
+2022-10-26 22:48:33,488 INFO    MainThread:88435 [wandb_run.py:_on_init():2004] got version response 
+2022-10-26 22:48:33,488 INFO    MainThread:88435 [wandb_init.py:init():728] starting run threads in backend
+2022-10-26 22:48:33,588 INFO    MainThread:88435 [wandb_run.py:_console_start():1980] atexit reg
+2022-10-26 22:48:33,588 INFO    MainThread:88435 [wandb_run.py:_redirect():1838] redirect: SettingsConsole.WRAP_RAW
+2022-10-26 22:48:33,589 INFO    MainThread:88435 [wandb_run.py:_redirect():1903] Wrapping output streams.
+2022-10-26 22:48:33,589 INFO    MainThread:88435 [wandb_run.py:_redirect():1925] Redirects installed.
+2022-10-26 22:48:33,589 INFO    MainThread:88435 [wandb_init.py:init():765] run started, returning control to user process
+2022-10-26 22:48:39,060 WARNING MsgRouterThr:88435 [router.py:message_loop():77] message_loop has been closed

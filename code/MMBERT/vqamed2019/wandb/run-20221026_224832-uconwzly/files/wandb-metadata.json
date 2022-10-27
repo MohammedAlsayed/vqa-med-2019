@@ -1,0 +1,32 @@
+{
+    "os": "macOS-12.5.1-x86_64-i386-64bit",
+    "python": "3.10.6",
+    "heartbeatAt": "2022-10-27T05:48:33.510964",
+    "startedAt": "2022-10-27T05:48:32.445092",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "--run_name",
+        "bench_mark1",
+        "--mixed_precision",
+        "--batch_size",
+        "16",
+        "--num_vis",
+        "64",
+        "--epochs",
+        "10"
+    ],
+    "state": "running",
+    "program": "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/train.py",
+    "codePath": "vqamed2019/train.py",
+    "git": {
+        "remote": "https://github.com/VirajBagal/MMBERT.git",
+        "commit": "9471148fa5f00dfaa5d9b00f4d2d30172d77cfe3"
+    },
+    "email": "mohammed2250@gmail.com",
+    "root": "/Users/mohammed/Workspace/csci499-project/code/MMBERT",
+    "host": "melon",
+    "username": "mohammed",
+    "executable": "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/bin/python3"
+}

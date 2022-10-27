@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/train.py", line 69, in <module>
+    train_df, val_df, test_df = load_data(args)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed2019/utils.py", line 53, in load_data
+    traindf = pd.read_csv(os.path.join(args.data_dir, 'traindf.csv'))
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/pandas/util/_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/pandas/util/_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1735, in _make_engine
+    self.handles = get_handle(
+  File "/Users/mohammed/Workspace/csci499-project/code/MMBERT/vqamed/lib/python3.10/site-packages/pandas/io/common.py", line 856, in get_handle
+    handle = open(
+FileNotFoundError: [Errno 2] No such file or directory: '../dataset/traindf.csv'
