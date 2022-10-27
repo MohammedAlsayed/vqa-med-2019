@@ -28,7 +28,7 @@ if __name__ == '__main__':
 
     parser.add_argument('--run_name', type = str, required = True, help = "run name for wandb")
     parser.add_argument('--data_dir', type = str, required = False, default = "../../../dataset/", help = "path for data")
-    parser.add_argument('--model_dir', type = str, required = False, default = "../../../out/weights/val_loss_3.pt", help = "path to load weights")
+    parser.add_argument('--model_dir', type = str, required = False, default = "../../../out/weights/", help = "path to load weights")
     parser.add_argument('--save_dir', type = str, required = False, default = "../../../out/", help = "path to save weights")
     parser.add_argument('--category', type = str, required = False, default = None,  help = "choose specific category if you want")
     parser.add_argument('--use_pretrained', action = 'store_true', default = False, help = "use pretrained weights or not")
@@ -137,10 +137,12 @@ if __name__ == '__main__':
 
 
     val_tfm = transforms.Compose([transforms.ToPILImage(),
+                                transforms.RandomResizedCrop(224,scale=(0.75,1.25),ratio=(0.75,1.25)),
                                 transforms.ToTensor(), 
                                 transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
     test_tfm = transforms.Compose([transforms.ToPILImage(),
+                                transforms.RandomResizedCrop(224,scale=(0.75,1.25),ratio=(0.75,1.25)),
                                 transforms.ToTensor(), 
                                  transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
@@ -167,7 +169,15 @@ if __name__ == '__main__':
     val_losses = []
 
     train_accuracies = []
-    val_accuracies = []
+    
+    val_total_accuracies = []
+    val_binary_accuracies = []
+    val_plane_accuracies = []
+    val_organ_accuracies = []
+    val_modality_accuracies = []
+    val_abnorm_accuracies = []
+
+
 
     train_bleus = []
     val_bleus = []
@@ -175,7 +185,6 @@ if __name__ == '__main__':
     for epoch in range(args.epochs):
 
         print(f'Epoch {epoch+1}/{args.epochs}')
-
 
         train_loss, _, train_acc, train_bleu, _ = train_one_epoch(trainloader, model, optimizer, criterion, device, scaler, args, idx2ans)
         val_loss, predictions, val_acc, val_bleu = validate(valloader, model, criterion, device, scaler, args, val_df,idx2ans)
@@ -186,11 +195,16 @@ if __name__ == '__main__':
         train_losses.append(train_loss)
         val_losses.append(val_loss)
         train_accuracies.append(train_acc)
-        val_accuracies.append(val_acc)
+        
+        val_total_accuracies.append(val_acc['val_total_acc'])
+        val_binary_accuracies.append(val_acc['val_binary_acc'])
+        val_plane_accuracies.append(val_acc['val_plane_acc'])
+        val_organ_accuracies.append(val_acc['val_organ_acc'])
+        val_modality_accuracies.append(val_acc['val_modality_acc'])
+        val_abnorm_accuracies.append(val_acc['val_abnorm_acc'])
 
         train_bleus.append(train_bleu)
         val_bleus.append(val_bleu)
-
         if not args.category:
 
             log_dict = val_acc
@@ -221,31 +235,45 @@ if __name__ == '__main__':
             ax[0].set_ylabel('Loss')
             ax[0].legend()
             ax[1].plot(train_epochs, train_accuracies, 'b', label='training accuracy')
-            ax[1].plot(val_epochs, val_accuracies, 'g', label='validation accuracy')
+            ax[1].plot(val_epochs, val_total_accuracies, 'g', label='validation accuracy')
             ax[1].set_title('Training and Validation accuracy')
             ax[1].set_xlabel('Epochs')
             ax[1].set_ylabel('accuracy')
             ax[1].legend()
             fig.savefig(os.path.join(args.save_dir, f'plots/{args.run_name}_accuracy_loss.png'))
 
+
+            fig, ax = plt.subplots(1, 2, figsize=(10, 4))
+            ax[0].plot(train_epochs, val_plane_accuracies, label='plane acc')
+            ax[0].plot(train_epochs, val_organ_accuracies, label='organ acc')
+            ax[0].plot(train_epochs, val_modality_accuracies, label='modality acc')
+            ax[0].plot(train_epochs, val_abnorm_accuracies, label='abnorm acc')
+            ax[0].plot(train_epochs, val_binary_accuracies, label='binary acc')
+            ax[0].set_title('Training and Validation loss')
+            ax[0].set_xlabel('Epochs')
+            ax[0].set_ylabel('Loss')
+            ax[0].legend()
+            
+            fig.savefig(os.path.join(args.save_dir, f'plots/{args.run_name}_all_val_category_accuracy.png'))
+
         if not args.category:
 
-            if val_acc['total_acc'] > best_acc1:
+            if val_acc['val_total_acc'] > best_acc1:
                 torch.save(model.state_dict(),os.path.join(args.save_dir, f'weights/{args.run_name}_acc.pt'))
-                best_acc1=val_acc['total_acc']
+                best_acc1=val_acc['val_total_acc']
 
         else:
 
-            if val_acc > best_acc1:
+            if val_acc['val_total_acc'] > best_acc1:
                 print('Saving model')
                 torch.save(model.state_dict(),os.path.join(args.save_dir, f'weights/{args.run_name}_acc.pt'))
-                best_acc1 = val_acc 
+                best_acc1 = val_acc['val_total_acc']
 
 
 
-        if val_acc > best_acc2:
+        if val_acc['val_total_acc'] > best_acc2:
             counter = 0
-            best_acc2 = val_acc
+            best_acc2 = val_acc['val_total_acc']
         else:
             counter+=1
             if counter > 20:

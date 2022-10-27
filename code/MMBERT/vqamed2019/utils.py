@@ -57,9 +57,9 @@ def load_data(args, remove = None):
     if remove is not None:
         traindf = traindf[~traindf['img_id'].isin(remove)].reset_index(drop=True)
 
-    traindf['img_id'] = traindf['img_id'].apply(lambda x: os.path.join(args.data_dir, 'training/train_images', x + '.jpg'))
-    valdf['img_id'] = valdf['img_id'].apply(lambda x: os.path.join(args.data_dir, 'validation/val_images', x + '.jpg'))
-    testdf['img_id'] = testdf['img_id'].apply(lambda x: os.path.join(args.data_dir, 'testing/test_images', x + '.jpg'))
+    traindf['img_id'] = traindf['img_id'].apply(lambda x: os.path.join(args.data_dir, 'training/train_images/', x + '.jpg'))
+    valdf['img_id'] = valdf['img_id'].apply(lambda x: os.path.join(args.data_dir, 'validation/val_images/', x + '.jpg'))
+    testdf['img_id'] = testdf['img_id'].apply(lambda x: os.path.join(args.data_dir, 'testing/test_images/', x + '.jpg'))
     # testdf['img_id'] = testdf['img_id'].apply(lambda x: os.path.join(args.data_dir, x + '.jpg'))
 
     traindf['category'] = traindf['category'].str.lower()
@@ -165,15 +165,12 @@ class VQAMed(Dataset):
         if self.args.smoothing:
             answer = onehot(self.args.num_classes, answer)
 
-        img = cv2.imread(path)
-  
+        img = cv2.imread(path)  
 
         if self.tfm:
             img = self.tfm(img)
-            
+
         tokens, segment_ids, input_mask= encode_text(question, self.tokenizer, self.args)
-
-
         return img, torch.tensor(tokens, dtype = torch.long), torch.tensor(segment_ids, dtype = torch.long), torch.tensor(input_mask, dtype = torch.long), torch.tensor(answer, dtype = torch.long), path
 
 
@@ -607,10 +604,9 @@ def validate(loader, model, criterion, device, scaler, args, val_df, idx2ans):
     PREDS = []
     TARGETS = []
     bar = tqdm(loader, leave=False)
-
     with torch.no_grad():
         for (img, question_token,segment_ids,attention_mask,target, _) in bar:
-
+            
             img, question_token,segment_ids,attention_mask,target = img.to(device), question_token.to(device), segment_ids.to(device), attention_mask.to(device), target.to(device)
             question_token = question_token.squeeze(1)
             attention_mask = attention_mask.squeeze(1)
