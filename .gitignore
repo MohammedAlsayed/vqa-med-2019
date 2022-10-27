@@ -1,3 +1,5 @@
 .DS_Store
 /VQA-2020
 /code/MMBERT/vqamed2019/wandb/
+/code/MMBERT/vqamed2019/project/
+/code/MMBERT/vqamed2019/__pycache__/
