@@ -282,7 +282,9 @@ class Transfer(nn.Module):
 
         self.args = args
         self.num_vis = args.num_vis
-        self.model = models.resnet152(pretrained=True)
+        # self.model = models.resnet152(pretrained=True)
+        self.model = models.resnet152(weights=None)
+        self.model.load_state_dict(torch.load('/home1/alsayedm/vqa-med-2019/few_shot_learning/resnet152_radiology_full.pt'))
         # for p in self.parameters():
         #     p.requires_grad=False
 
