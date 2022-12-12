@@ -115,7 +115,7 @@ def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_siz
         print('-' * 10)
 
         # Each epoch has a training and validation phase
-        for phase in ['train', 'val']:
+        for phase in ['train', 'test']:
             if phase == 'train':
                 model.train()  # Set model to training mode
             else:
@@ -156,7 +156,7 @@ def train_model(model, criterion, optimizer, scheduler, dataloaders, dataset_siz
             print(f'{phase} Loss: {epoch_loss:.4f} Acc: {epoch_acc:.4f}')
 
             # deep copy the model
-            if phase == 'val' and epoch_acc > best_acc:
+            if phase == 'test' and epoch_acc > best_acc:
                 best_acc = epoch_acc
                 best_model_wts = copy.deepcopy(model.state_dict())
 
